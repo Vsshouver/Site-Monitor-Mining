@@ -23,4 +23,4 @@ Um sistema de gerenciamento para monitoramento de equipamentos de mineração, d
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/monitor-mining.git
+   https://github.com/Vsshouver/Site-Monitor-Mining/
