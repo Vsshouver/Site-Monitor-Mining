@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Mining</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tela de Login -->
+    <div id="login-container" class="login-container">
+        <div class="logo">
+            <img src="logo.png" alt="Monitor Mining Logo">
+            <h1>Monitor Mining</h1>
+        </div>
+        <form id="loginForm" onsubmit="return login()">
+            <input type="text" id="username" placeholder="Usuário" required>
+            <input type="password" id="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <!-- Página Principal com Barra Lateral -->
+    <div id="main-container" class="main-container hidden">
+        <!-- Barra Lateral -->
+        <div class="sidebar">
+            <a href="#" onclick="showContent('dashboard')">Dashboard</a>
+            <a href="#" onclick="showContent('cadastro')">Cadastrar Equipamento</a>
+            <a href="#" onclick="showContent('users')">Cadastrar Usuário</a>
+            <a href="#" onclick="showContent('relatorios')">Relatórios</a>
+            <a href="#" onclick="showContent('configuracoes')">Configurações</a>
+            <a href="#" onclick="logout()">Sair</a>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <div class="content">
+            <div class="header">
+                <h1 id="main-title">Bem-vindo ao Painel Monitor Mining</h1>
+            </div>
+            <div id="dashboard" class="content-section">Conteúdo do Dashboard...</div>
+            <div id="cadastro" class="content-section hidden">Formulário de Cadastro de Equipamento...</div>
+            <div id="users" class="content-section hidden">
+                <h2>Cadastro de Usuário</h2>
+                <form id="userForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Nome completo" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+            <div id="relatorios" class="content-section hidden">Relatórios...</div>
+            <div id="configuracoes" class="content-section hidden">Configurações do Sistema...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
