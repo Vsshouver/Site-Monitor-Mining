@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitor Mining</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Adicionando Chart.js -->
 </head>
 <body>
     <!-- Tela de Login -->
@@ -22,14 +23,16 @@
 
     <!-- Página Principal com Barra Lateral -->
     <div id="main-container" class="main-container hidden">
-        <!-- Barra Lateral -->
+        <!-- Barra Lateral Centralizada -->
         <div class="sidebar">
-            <a href="#" onclick="showContent('dashboard')">Dashboard</a>
-            <a href="#" onclick="showContent('cadastro')">Cadastrar Equipamento</a>
-            <a href="#" onclick="showContent('users')">Cadastrar Usuário</a>
-            <a href="#" onclick="showContent('relatorios')">Relatórios</a>
-            <a href="#" onclick="showContent('configuracoes')">Configurações</a>
-            <a href="#" onclick="logout()">Sair</a>
+            <div class="menu-content">
+                <a href="#" onclick="showContent('dashboard')">Dashboard</a>
+                <a href="#" onclick="showContent('cadastro')">Cadastrar Equipamento</a>
+                <a href="#" onclick="showContent('users')">Cadastrar Usuário</a>
+                <a href="#" onclick="showContent('relatorios')">Relatórios</a>
+                <a href="#" onclick="showContent('configuracoes')">Configurações</a>
+                <a href="#" onclick="logout()">Sair</a>
+            </div>
         </div>
 
         <!-- Conteúdo Principal -->
@@ -37,10 +40,38 @@
             <div class="header">
                 <h1 id="main-title">Bem-vindo ao Painel Monitor Mining</h1>
             </div>
-            <div id="dashboard" class="content-section">Conteúdo do Dashboard...</div>
-            <div id="cadastro" class="content-section hidden">Formulário de Cadastro de Equipamento...</div>
+            <div id="dashboard" class="content-section">
+                <h2>Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card">
+                        <h3>DF - Disponibilidade Física</h3>
+                        <canvas id="dfChart"></canvas> <!-- Gráfico de DF -->
+                        <p>Disponibilidade: 85%</p>
+                    </div>
+                    <div class="card">
+                        <h3>UT - Utilização</h3>
+                        <canvas id="utChart"></canvas> <!-- Gráfico de UT -->
+                        <p>Utilização: 75%</p>
+                    </div>
+                    <div class="card">
+                        <h3>Produtividade de Equipamentos</h3>
+                        <canvas id="prodChart"></canvas> <!-- Gráfico de Produtividade -->
+                        <p>Produtividade Média: 65%</p>
+                    </div>
+                </div>
+            </div>
+            <div id="cadastro" class="content-section hidden">
+                <h2>Cadastrar Equipamento</h2>
+                <form id="equipForm">
+                    <label for="equipName">Nome do Equipamento:</label>
+                    <input type="text" id="equipName" placeholder="Nome" required>
+                    <label for="equipType">Tipo:</label>
+                    <input type="text" id="equipType" placeholder="Tipo de Equipamento" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
             <div id="users" class="content-section hidden">
-                <h2>Cadastro de Usuário</h2>
+                <h2>Cadastrar Usuário</h2>
                 <form id="userForm">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" placeholder="Nome completo" required>
@@ -51,8 +82,20 @@
                     <button type="submit">Cadastrar</button>
                 </form>
             </div>
-            <div id="relatorios" class="content-section hidden">Relatórios...</div>
-            <div id="configuracoes" class="content-section hidden">Configurações do Sistema...</div>
+            <div id="relatorios" class="content-section hidden">
+                <h2>Relatórios</h2>
+                <p>Aqui estão alguns relatórios fictícios para demonstração:</p>
+                <ul>
+                    <li>Relatório de Operação - Janeiro 2024</li>
+                    <li>Relatório de Produção - Fevereiro 2024</li>
+                    <li>Relatório de Desempenho - Março 2024</li>
+                </ul>
+                <button onclick="generateReport()">Gerar Novo Relatório</button>
+            </div>
+            <div id="configuracoes" class="content-section hidden">
+                <h2>Configurações do Sistema</h2>
+                <p>Ajustes e configurações gerais...</p>
+            </div>
         </div>
     </div>
 
