@@ -21,6 +21,9 @@ Um sistema de gerenciamento para monitoramento de equipamentos de mineração, d
 
 ## Instalação
 
+LOGIN: admin
+SENHA: senha
+
 1. Clone o repositório:
    ```bash
    https://github.com/Vsshouver/Site-Monitor-Mining/
