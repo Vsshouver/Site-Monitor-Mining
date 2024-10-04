@@ -4,9 +4,22 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1B3B1A; /* Verde Escuro */
+    overflow: hidden; /*Remover caso for ampliar a página para baixo*/
 }
 
-/* Tela de Login */
+/*Estilo da tela de login*/
+div.logo {
+    display: grid;
+    place-items: center;
+}
+
+form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
@@ -60,6 +73,11 @@ body {
     background-color: #b6942f; /* Dourado mais escuro */
 }
 
+/*Estilo do cabeçalho*/
+.cabecalho {
+    display: none;
+}
+
 /* Página Principal */
 .main-container {
     display: flex;
@@ -98,8 +116,7 @@ body {
 }
 
 .content {
-    margin-left: 250px;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
 }
 
