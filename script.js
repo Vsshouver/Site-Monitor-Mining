@@ -21,14 +21,6 @@ function showContent(section) {
     document.getElementById(section).classList.remove("hidden");
 }
 
-// Ocultar cabeçalho na tela de login
-const header = document.getElementById('header');
-const button = document.getElementById('botaoLogin');
-
-button.addEventListener('click', function() {
-    header.style.display = 'block;'
-});
-
 // Função para logout
 function logout() {
     document.getElementById("main-container").classList.add("hidden");
