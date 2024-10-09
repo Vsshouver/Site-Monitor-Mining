@@ -11,6 +11,11 @@ body {
     height: 100vh;
 }
 
+section {
+    padding: 40px 4%;
+    padding-top: 0%;
+}
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -164,11 +169,6 @@ div.contato button {
 }
 
 /*ESTILO DOS DASHBOARDS*/
-section.dashboards {
-    padding: 40px 4%;
-    padding-top: 0%;
-}
-
 section.dashboards .flex {
     gap: 20px;
 }
@@ -193,3 +193,16 @@ section.dashboards .flex {
     padding: 20px;
     justify-content: center;
 }
+
+/*ESTILO DOS RELATÓRIOS*/
+section.relatorios {
+
+}
+
+.texto-relatorios {
+    color: #fff;
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
