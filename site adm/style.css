@@ -49,61 +49,6 @@ form .btn-enviar input:hover {
     transition: 0.2s;
 }
 
-/*ESTILO DO CABEÇALHO*/
-header {
-    padding: 30px 4%;
-}
-
-.img-logo {
-    font-size: 16px;
-    max-width: 120px;
-    display: grid;
-    place-items: center;
-}
-
-header>.interface {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-}
-
-header nav.menu-desktop a:hover {
-    color: #fff;
-    transform: scale(1.07);
-    transition: .1s;
-}
-
-header nav ul {
-    list-style-type: none;
-}
-
-header nav.menu-desktop ul li {
-    display: inline-block;
-    padding: 0 40px;
-}
-
-.interface .contato button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #CDA434;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.1s;
-}
-
-div.contato button {
-    color: #fff;
-    font-weight: 100;
-}
-
 /* ESTILO DO MENU MOBILE */
 .btn-abrir-menu i {
     color: #5e057e;
@@ -166,6 +111,67 @@ div.contato button {
     z-index: 88888;
     display: none;
 }
+
+/*ESTILO DO CABEÇALHO*/
+header {
+    padding: 30px 4%;
+}
+
+.img-logo {
+    font-size: 16px;
+    max-width: 120px;
+    display: grid;
+    place-items: center;
+}
+
+.logo a:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+header nav.menu-desktop a:hover {
+    color: #fff;
+    transform: scale(1.07);
+    transition: .1s;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.interface .contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #CDA434;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+div.contato button {
+    color: #fff;
+    font-weight: 100;
+}
+
 
 /*ESTILO DOS DASHBOARDS*/
 section.dashboards .flex {
