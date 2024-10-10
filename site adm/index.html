@@ -30,6 +30,8 @@
             <li><a href="#">Relatórios</a></li>
             <li><a href="#">Cadastrar Equipamento</a></li>
             <li><a href="#">Cadastrar Usuário</a></li>
+            <li><a href="#">Configurações</a></li>
+            <li><a href="#">Sair</a></li>
           </ul>
         </nav>
         <div class="contato">
@@ -43,25 +45,6 @@
           <i class="bi bi-list"></i>
         </div>
 
-        <div class="menu-mobile" id="menu-mobile">
-          <div class="btn-fechar">
-            <i class="bi bi-x-circle"></i>
-          </div>
-
-          <nav>
-            <ul>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="#">Cadastrar Equipamento</a></li>
-              <li><a href="#">Cadastrar Usuário</a></li>
-              <li><a href="#">Relatórios</a></li>
-              <li><a href="#">Configurações</a></li>
-              <li><a href="#">Sair</a></li>
-            </ul>
-          </nav>
-        </div>
-        <!--menu mobile-->
-
-        <div class="overlay-menu" id="overlay-menu"></div>
       </div>
       <!--Interface-->
     </header>
@@ -99,22 +82,157 @@
       <!--dashboards-->
       <section class="relatorios">
         <div class="interface">
+    
           <h1 class="titulo">RELATÓRIOS</h1>
+
           <div class="flex">
+
             <div class="texto-relatorios">
               <p>Aqui estão alguns relatórios fictícios para demonstração:</p>
             </div>
+
             <div class="relatorio-operacao">
               <a href="#"><li>Relatório de Operação - Janeiro 2024</li></a>
               <a href="#"><li>Relatório de Operação - Fevereiro 2024</li></a>
               <a href="#"><li>Relatório de Operação - Março 2024</li></a>
             </div>
+
             <div class="btn-relatorio">
               <button type="submit">Gerar Relatório</button>
             </div>
+
           </div> <!--flex-->
+
         </div> <!--interface-->
+
       </section> <!--relatorios-->
+
+      <section class="cad-acao">
+
+        <div class="interface" id="interface">
+
+          <h1 class="titulo" id="titulo">CADASTRAR NOVA AÇÃO</h1>
+
+          <div class="flex" id="flex">
+
+            <form action="#">
+
+              <div class="tipo-acao" id="tipo-acao">
+                <p>Qual tipo ação deseja cadastrar?</p>
+                <select class="tipo-acao" id="tipo-acao" name="tipo-acao" required>
+                  <option value="">Selecione o tipo de ação</option>
+                  <option value="rota">Nova rota</option>
+                  <option value="escavacao">Nova escavação</option>
+                  <option value="parada">Parada</option>
+                </select>
+              </div>
+
+              <div class="nome-acao" id="nome-acao">
+                <p>Nome da Ação</p>
+                <input type="text" name="acao" class="acao" id="acao" placeholder="Digite o nome da ação" maxlength="30" required>
+              </div>
+
+              <div class="descricao-acao" id="descricao-acao">
+                <p>Descrição da Ação (opcional)</p>
+                <textarea name="desc-acao" class="desc-acao" id="desc-acao" placeholder="Descrição..." maxlength="150"></textarea>
+              </div>
+  
+              <div class="btn-acao" id="btn-acao">
+                <button type="submit">Cadastrar ação</button>
+              </div>
+
+            </form>
+
+          </div>  <!--flex-->
+
+        </div>  <!--interface-->
+
+      </section>  <!--cad-equipamento-->
+
+      <section class="cad-equipamento">
+
+        <div class="interface" id="interface">
+
+          <h1 class="titulo" id="titulo">CADASTRAR EQUIPAMENTO</h1>
+
+          <div class="flex" id="flex">
+
+            <form action="#">
+
+              <div class="nome-equipamento" id="nome-equipamento">
+                <p>Nome do Equipamento</p>
+                <input type="text" name="nome" class="nome" id="nome" placeholder="Nome" maxlength="30" required>
+              </div>
+  
+              <div class="tipo-equipamento" id="tipo-equipamento">
+                <p>Tipo</p>
+                <select class="tipo" id="tipo" name="tipo" required>
+                  <option value="">Selecione o tipo de equipamento</option>
+                  <option value="caminhao">Caminhão</option>
+                  <option value="escavadeira">Escavadeira</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+  
+              <div class="btn-equipamento" id="btn-equipamento">
+                <button type="submit">Cadastrar Equipamento</button>
+              </div>
+
+            </form>
+
+          </div>  <!--flex-->
+
+        </div>  <!--interface-->
+
+      </section>  <!--cad-equipamento-->
+
+      <section class="cad-usuario">
+
+        <div class="interface" id="interface">
+
+          <h1 class="titulo" id="titulo">CADASTRAR USUÁRIO</h1>
+
+          <div class="flex" id="flex">
+
+            <form action="#">
+
+              <div class="nome-completo" id="nome-completo">
+                <p>Nome Completo</p>
+                <input type="text" name="nome" class="nome" id="nome" placeholder="Nome Completo" maxlength="40" required>
+              </div>
+  
+              <div class="cpf-usuario" id="cpf-usuario">
+                <p>CPF (Apenas números)</p>
+                <input type="tel" name="cpf" class="cpf" id="cpf" placeholder="CPF" inputmode="numeric" maxlength="11" required>
+              </div>
+  
+              <div class="username" id="username">
+                <p>Nome de Usuário</p>
+                <input type="text" name="user" class="user" id="user" placeholder="Nome de Usuário" maxlength="30" required>
+              </div>
+  
+              <div class="email-usuario" id="email-usuario">
+                <p>E-mail</p>
+                <input type="email" name="email" id="email"  placeholder="Digite um e-mail válido" maxlength="50" required>
+              </div>
+  
+              <div class="senha-usuario" id="senha-usuario">
+                <p>Senha</p>
+                <input type="password" name="senha" class="senha" id="senha"  placeholder="Digite uma senha" maxlength="20" required>
+              </div>
+  
+              <div class="btn-usuario" id="btn-usuario">
+                <button type="submit">Cadastrar Usuário</button>
+              </div>
+
+            </form>
+
+          </div>  <!--flex-->
+
+        </div>  <!--interface-->
+
+      </section>  <!--cad-usuario-->
+
     </main>
   </body>
 </html>

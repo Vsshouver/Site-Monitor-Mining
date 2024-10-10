@@ -221,6 +221,10 @@ section.relatorios a {
     transition: 0.2s;
 }
 
+section.relatorios a li:hover {
+    transform: scale(1.05);
+}
+
 section.relatorios .relatorio-operacao {
 
 }
@@ -232,11 +236,116 @@ section.relatorios .relatorio-operacao {
     border: none;
     background-color: #CDA434;
     font-size: 20px;
-    cursor: pointer;
     margin: 20px 5px;
     transition: 0.2s;
 }
 
+
+
 .btn-relatorio button:hover {
     transform: scale(1.05);
+}
+
+/*CADASTRO DE AÇÕES*/
+section.cad-acao .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-acao form div {
+    margin-top: 10px;
+}
+
+.tipo-acao select {
+    height: 30px;
+    width: 300px;
+}
+
+.nome-acao input {
+    height: 30px;
+    width: 300px;
+}
+
+.descricao-acao textarea {
+    height: 100px;
+    width: 300px;
+}
+
+section.cad-acao form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 20px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+
+
+/*CADASTRO DE EQUIPAMENTO*/
+section.cad-equipamento .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-equipamento form div {
+    margin-top: 10px;
+}
+
+.nome-equipamento input {
+    height: 30px;
+    width: 300px;
+}
+
+.tipo-equipamento select {
+    height: 30px;
+    width: 300px;
+}
+
+section.cad-equipamento form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 18px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+/*CADASTRO DE USUÁRIO*/
+section.cad-usuario .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-usuario form div {
+    margin-top: 10px;
+}
+
+section.cad-usuario form input {
+    height: 30px;
+    width: 300px;
+}
+
+section.cad-usuario form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 20px;
+    margin: 20px 5px;
+    transition: 0.2s;
 }
