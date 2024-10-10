@@ -246,6 +246,32 @@ section.relatorios .relatorio-operacao {
     transform: scale(1.05);
 }
 
+/*TELA DE CADASTRO*/
+section.cadastro .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.texto-cadastro {
+    color: #fff;
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
+section.cadastro a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+section.cadastro a li:hover {
+    transform: scale(1.05);
+}
+
 /*CADASTRO DE AÇÕES*/
 section.cad-acao .flex {
     display: flex;
@@ -261,12 +287,12 @@ section.cad-acao form div {
 
 .tipo-acao select {
     height: 30px;
-    width: 300px;
+    width: 400px;
 }
 
-.nome-acao input {
+section.cad-acao form input {
     height: 30px;
-    width: 300px;
+    width: 400px;
 }
 
 .descricao-acao textarea {
@@ -302,12 +328,12 @@ section.cad-equipamento form div {
 
 .nome-equipamento input {
     height: 30px;
-    width: 300px;
+    width: 400px;
 }
 
 .tipo-equipamento select {
     height: 30px;
-    width: 300px;
+    width: 400px;
 }
 
 section.cad-equipamento form button {
@@ -321,8 +347,8 @@ section.cad-equipamento form button {
     transition: 0.2s;
 }
 
-/*CADASTRO DE USUÁRIO*/
-section.cad-usuario .flex {
+/*CADASTRO DE OPERADOR*/
+section.cad-operador .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -330,16 +356,21 @@ section.cad-usuario .flex {
     text-align: center;
 }
 
-section.cad-usuario form div {
+section.cad-operador form div {
     margin-top: 10px;
 }
 
-section.cad-usuario form input {
+.equipamento-hab select {
     height: 30px;
-    width: 300px;
+    width: 400px;
 }
 
-section.cad-usuario form button {
+section.cad-operador form input {
+    height: 30px;
+    width: 400px;
+}
+
+section.cad-operador form button {
     width: 250px;
     height: 40px;
     border-radius: 10px;

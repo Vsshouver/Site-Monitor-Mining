@@ -107,6 +107,29 @@
 
       </section> <!--relatorios-->
 
+      <section class="cadastro">
+        <div class="interface">
+    
+          <h1 class="titulo">CADASTRO</h1>
+
+          <div class="flex">
+
+            <div class="texto-cadastro">
+              <p>O que deseja cadastrar?</p>
+            </div>
+
+            <div class="opcoes-cadastro">
+              <a href="#"><li>Cadastrar Nova Ação</li></a>
+              <a href="#"><li>Cadastrar Equipamento</li></a>
+              <a href="#"><li>Cadastrar Operador</li></a>
+            </div>
+
+          </div> <!--flex-->
+
+        </div> <!--interface-->
+
+      </section> <!--relatorios-->
+
       <section class="cad-acao">
 
         <div class="interface" id="interface">
@@ -128,9 +151,16 @@
               </div>
 
               <div class="nome-acao" id="nome-acao">
-                <p>Nome da Ação</p>
+                <p>Nome</p>
                 <input type="text" name="acao" class="acao" id="acao" placeholder="Digite o nome da ação" maxlength="30" required>
               </div>
+
+              <div class="local-acao" id="local-acao">
+                <p>Local</p>
+                <input type="text" name="local" class="local" id="local" placeholder="Local da ação"  maxlength="50" required>
+              </div>
+
+              <div class="area-acao" id="area-acao"></div>
 
               <div class="descricao-acao" id="descricao-acao">
                 <p>Descrição da Ação (opcional)</p>
@@ -186,15 +216,25 @@
 
       </section>  <!--cad-equipamento-->
 
-      <section class="cad-usuario">
+      <section class="cad-operador">
 
         <div class="interface" id="interface">
 
-          <h1 class="titulo" id="titulo">CADASTRAR USUÁRIO</h1>
+          <h1 class="titulo" id="titulo">CADASTRAR OPERADOR</h1>
 
           <div class="flex" id="flex">
 
             <form action="#">
+
+              <div class="equipamento-hab" id="equipamento-hab">
+                <p>Equipamento(s) Habilitado(s)</p>
+                <select class="eqp-hab" id="eqp-hab" name="eqp-hab" required>
+                  <option value="">Selecione o equipamento a ser habilitado</option>
+                  <option value="caminhao">Caminhão</option>
+                  <option value="escavadeira">Escavadeira</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
 
               <div class="nome-completo" id="nome-completo">
                 <p>Nome Completo</p>
@@ -202,8 +242,8 @@
               </div>
   
               <div class="cpf-usuario" id="cpf-usuario">
-                <p>CPF (Apenas números)</p>
-                <input type="tel" name="cpf" class="cpf" id="cpf" placeholder="CPF" inputmode="numeric" maxlength="11" required>
+                <p>Matrícula</p>
+                <input type="tel" name="matricula" class="matricula" id="matricula" placeholder="Número da matrícula" inputmode="numeric" maxlength="15" required>
               </div>
   
               <div class="username" id="username">
