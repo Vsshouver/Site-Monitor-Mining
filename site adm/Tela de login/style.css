@@ -1,72 +1,120 @@
-body {
-  font-family: "Poppins", sans-serif;
+/* Estilo geral */
+* {
   margin: 0;
   padding: 0;
-  background-color: #1b3b1a; /* Verde Escuro */
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/*Estilo da tela de login*/
-div.logo {
-  display: grid;
-  place-items: center;
+body, html {
+  height: 100%;
+  width: 100%;
 }
 
-form {
-  width: 400px;
+body {
+  background: #1b3b1a;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
+/* Estilo da section.login para ocupar toda a tela */
+section.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: #1b3b1a;
+}
+
+/* Estilo da tela de login */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px; /* Aumentando a largura máxima da caixa de login */
+  width: 100%; /* Garantindo que ela ocupe 100% do espaço disponível */
+  background-color: #163515;
+  box-shadow: 0 10px 20px rgb(0, 0, 0 , 0.6);
+
 }
 
-.login-container .logo {
+.logo-login {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.login-container .logo img {
-  width: 100px;
-  height: 100px;
+.logo-login img {
+  width: 170px; /* Aumentando o tamanho do logo */
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
 
-.login-container .logo h1 {
+.logo-login h1 {
   color: #fff;
-  font-size: 32px;
-  margin: 10px 0;
+  font-size: 36px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
-.login-container form {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.login-container input {
+/* Estilo do formulário */
+form {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  font-size: 18px;
+  transition: all 0.3s ease;
 }
 
-.login-container button {
-  background-color: #cda434; /* Dourado */
-  color: #fff;
-  padding: 10px 20px;
+form input:focus {
+  outline: none;
+  border-color: #6b6b83;
+  box-shadow: 0 0 10px rgba(107, 107, 131, 0.2);
+}
+
+button {
+  width: 50%;
+  padding: 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  background-color: #ffba08;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.login-container button:hover {
-  background-color: #b6942f; /* Dourado mais escuro */
+button:hover {
+  background-color: #ff8800;
+}
+
+/* Animação suave ao carregar a página */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container {
+  animation: fadeIn 0.5s ease-out;
 }
