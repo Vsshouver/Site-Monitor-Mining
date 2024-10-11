@@ -18,6 +18,22 @@ section {
     position: relative;
 }
 
+/* Animação suave ao carregar a página */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  section {
+    animation: fadeIn 0.5s ease-out;
+  }
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
