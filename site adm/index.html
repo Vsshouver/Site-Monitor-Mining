@@ -17,32 +17,12 @@
   <body>
     <header>
       <div class="interface">
+
         <div class="logo">
           <a href="#">
             <img class="img-logo" src="./img/mineracao.png" alt="Logo" />
             <h1 class="img-logo">Monitor Mining</h1>
           </a>
-        </div>
-        <!--Logo-->
-        <nav class="menu-desktop">
-          <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Relatórios</a></li>
-            <li><a href="#">Cadastrar Equipamento</a></li>
-            <li><a href="#">Cadastrar Usuário</a></li>
-            <li><a href="#">Configurações</a></li>
-            <li><a href="#">Sair</a></li>
-          </ul>
-        </nav>
-        <div class="contato">
-          <a href="#">
-            <button>Contato</button>
-          </a>
-        </div>
-        <!--Contato-->
-
-        <div class="btn-abrir-menu" id="btn-menu">
-          <i class="bi bi-list"></i>
         </div>
 
       </div>
@@ -50,6 +30,25 @@
     </header>
     <!--header-->
     <main>
+
+      <section class="menu-lateral" id="menu-lateral">
+        <div class="interface">
+          <div class="flex">
+
+            <nav class="menu">
+              <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Relatórios</a></li>
+                <li><a href="#">Cadastro</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Sair</a></li>
+              </ul>
+            </nav>
+
+          </div> <!--flex-->
+        </div> <!--Interface-->
+      </section> <!--menu-lateral-->
+
       <section class="dashboards">
         <div class="interface">
           <h1 class="titulo">DASHBOARD</h1>
@@ -128,7 +127,7 @@
 
         </div> <!--interface-->
 
-      </section> <!--relatorios-->
+      </section> <!--cadastro-->
 
       <section class="cad-acao">
 
@@ -261,8 +260,8 @@
                 <input type="password" name="senha" class="senha" id="senha"  placeholder="Digite uma senha" maxlength="20" required>
               </div>
   
-              <div class="btn-usuario" id="btn-usuario">
-                <button type="submit">Cadastrar Usuário</button>
+              <div class="btn-operador" id="btn-operador">
+                <button type="submit">Cadastrar Operador</button>
               </div>
 
             </form>
@@ -271,7 +270,7 @@
 
         </div>  <!--interface-->
 
-      </section>  <!--cad-usuario-->
+      </section>  <!--cad-operador-->
 
     </main>
   </body>

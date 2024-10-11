@@ -9,11 +9,13 @@
 body {
     background: #1b3b1a;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 section {
     padding: 40px 4%;
     padding-top: 0%;
+    position: relative;
 }
 
 .interface {
@@ -32,150 +34,120 @@ h1.titulo {
     text-align: center;
 }
 
-button:hover,
-form .btn-enviar input:hover {
-    transform: scale(1.05);
+/* ESTILO DO MENU LATERAL */
+section.menu-lateral {
+    padding: 30px 20px;
+    width: 20vw; /* 20% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    position: fixed; /* Fixa na tela, independente do scroll */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona na esquerda */
+    z-index: 999; /* Garante que fique à frente de outros elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    
+    background-color: #143613; /* Cor de fundo do menu */
+    border-right: 2px solid #141414; /* Borda à direita do menu */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o menu */
+    border-radius: 0 15px 15px 0; /* Bordas arredondadas no lado direito */
 }
 
-.btn-social button {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: none;
-    background-color: #CDA434;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: 0.2s;
+/* Estilo da lista de navegação */
+nav.menu ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    width: 170px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 100%; /* Garante que ocupe toda a altura da seção */
 }
 
-/* ESTILO DO MENU MOBILE */
-.btn-abrir-menu i {
-    color: #5e057e;
-    font-size: 40px;
+nav.menu ul li {
+    width: 100%; /* Faz o item ocupar toda a largura do menu */
+    text-align: center; /* Centraliza o texto */
 }
 
-.menu-mobile {
-    background: #000000;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 99999;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
+nav.menu ul li a {
+    display: inline-block; /* Transforma o <a> em um bloco em linha */
+    color: #fff; /* Define a cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho do texto */
+    padding: 10px 0; /* Adiciona um espaçamento ao redor do texto */
+    transition: transform 0.1s, background-color 0.1s; /* Transição suave para hover */
+    width: 100%; /* Ocupa toda a largura do item de menu */
 }
 
-.menu-mobile.abrir-menu {
-    width: 70%;
-}
-
-.menu-mobile.abrir-menu ~ .overlay-menu {
-    display: block;
-}
-
-.menu-mobile .btn-fechar {
-    padding: 20px 5%;
-
-}
-
-.menu-mobile .btn-fechar i {
-    color: #CDA434;
-    font-size: 35px;
-}
-
-.menu-mobile nav ul {
-    text-align: right;
-}
-
-.menu-mobile nav ul li a {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 8%;
-    display: block;
-}
-
-.menu-mobile nav ul li a:hover {
-    background-color: #5e057e;
-}
-
-.overlay-menu {
-    background-color: #00000094;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 88888;
-    display: none;
+nav.menu ul li a:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background-color: #275725; /* Adiciona uma cor de fundo no hover */
+    border-radius: 10px; /* Adiciona bordas arredondadas no hover */
 }
 
 /*ESTILO DO CABEÇALHO*/
 header {
     padding: 30px 4%;
-}
-
-.img-logo {
-    font-size: 16px;
-    max-width: 120px;
-    display: grid;
-    place-items: center;
-}
-
-.logo a:hover {
-    transform: scale(1.05);
-    transition: 0.2s;
+    width: 80vw; /* O header vai ocupar 80% da largura da tela */
+    margin-left: 20vw; /* O header fica à direita do menu lateral que ocupa 20% */
+    box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
 header>.interface {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
-header a {
+div.logo {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+div.logo a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
 }
 
-header nav.menu-desktop a:hover {
-    color: #fff;
-    transform: scale(1.07);
-    transition: .1s;
+div.logo a:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
 }
 
-header nav ul {
-    list-style-type: none;
+img.img-logo {
+    max-width: 150px;
 }
 
-header nav.menu-desktop ul li {
-    display: inline-block;
-    padding: 0 40px;
+h1.img-logo {
+    font-size: 28px;
 }
-
-.interface .contato button {
-    padding: 10px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    background-color: #CDA434;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.1s;
-}
-
-div.contato button {
-    color: #fff;
-    font-weight: 100;
-}
-
 
 /*ESTILO DOS DASHBOARDS*/
+section.dashboards {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Deixa espaço para o menu lateral */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+section.dashboards .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
 section.dashboards .flex {
+    display: flex;
     gap: 20px;
+    justify-content: flex-start; /* Alinha os cartões à esquerda */
+    flex-wrap: nowrap; /* Impede que os cartões quebrem de linha */
 }
 
 .dashboards .cartoes {
@@ -185,8 +157,7 @@ section.dashboards .flex {
     margin-top: 45px;
     border: 1px solid #ccc;
     border-radius: 20px;
-    width: 350px; /* Largura do cartão */
-    margin-top: 45px;
+    width: 350px; /* Largura dos cartões */
 }
 
 .dashboards .cartoes h2 {
@@ -200,11 +171,24 @@ section.dashboards .flex {
 }
 
 /*ESTILO DOS RELATÓRIOS*/
+section.relatorios {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+section.relatorios .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
 section.relatorios .flex {
     display: flex;
+    gap: 20px;
     flex-direction: column;
     align-items: center;
     color: #fff;
+    justify-content: flex-start;
 }
 
 .texto-relatorios {
@@ -225,10 +209,6 @@ section.relatorios a li:hover {
     transform: scale(1.05);
 }
 
-section.relatorios .relatorio-operacao {
-
-}
-
 .btn-relatorio button {
     width: 200px;
     height: 40px;
@@ -240,13 +220,23 @@ section.relatorios .relatorio-operacao {
     transition: 0.2s;
 }
 
-
-
 .btn-relatorio button:hover {
     transform: scale(1.05);
 }
 
+
 /*TELA DE CADASTRO*/
+section.cadastro {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura total */
+}
+
+section.cadastro .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
 section.cadastro .flex {
     display: flex;
     flex-direction: column;
@@ -273,6 +263,12 @@ section.cadastro a li:hover {
 }
 
 /*CADASTRO DE AÇÕES*/
+section.cad-acao {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
 section.cad-acao .flex {
     display: flex;
     flex-direction: column;
@@ -311,9 +307,17 @@ section.cad-acao form button {
     transition: 0.2s;
 }
 
-
+.btn-acao button:hover {
+    transform: scale(1.05);
+}
 
 /*CADASTRO DE EQUIPAMENTO*/
+section.cad-equipamento {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
 section.cad-equipamento .flex {
     display: flex;
     flex-direction: column;
@@ -347,7 +351,17 @@ section.cad-equipamento form button {
     transition: 0.2s;
 }
 
+.btn-equipamento button:hover {
+    transform: scale(1.05);
+}
+
 /*CADASTRO DE OPERADOR*/
+section.cad-operador {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
 section.cad-operador .flex {
     display: flex;
     flex-direction: column;
@@ -379,4 +393,8 @@ section.cad-operador form button {
     font-size: 20px;
     margin: 20px 5px;
     transition: 0.2s;
+}
+
+.btn-operador button:hover {
+    transform: scale(1.05);
 }
