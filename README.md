@@ -16,7 +16,7 @@ Um sistema de gerenciamento para monitoramento de equipamentos de mineração, d
 
 - **HTML**: Estrutura básica da página.
 - **CSS**: Estilização e layout responsivo.
-- **JavaScript**: Funcionalidades interativas e manipulação do DOM.
+- **React.js**: Funcionalidades interativas e manipulação do DOM.
 - **Chart.js**: Biblioteca para geração de gráficos interativos.
 
 ## Instalação
