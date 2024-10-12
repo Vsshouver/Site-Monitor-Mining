@@ -1,6 +1,6 @@
 # Monitor Mining
 
-Um sistema de gerenciamento para monitoramento de equipamentos de mineração, desenvolvido com HTML, CSS e JavaScript. O Monitor Mining oferece uma interface intuitiva para login, cadastro de equipamentos e usuários, visualização de relatórios e gráficos de desempenho.
+Um sistema de gerenciamento para monitoramento de equipamentos de mineração, desenvolvido com HTML, CSS e React.js. O Monitor Mining oferece uma interface intuitiva para login, cadastro de equipamentos e usuários, visualização de relatórios e gráficos de desempenho.
 
 ## Funcionalidades
 
