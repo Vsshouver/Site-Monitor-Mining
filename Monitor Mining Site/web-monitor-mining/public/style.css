@@ -1,0 +1,416 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1b3b1a;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 40px 4%;
+    padding-top: 0%;
+    position: relative;
+}
+
+/* Animação suave ao carregar a página */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  section {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+h1.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+/* ESTILO DO MENU LATERAL */
+section.menu-lateral {
+    padding: 30px 20px;
+    width: 20vw; /* 20% da largura da tela */
+    height: 100vh; /* 100% da altura da tela */
+    position: fixed; /* Fixa na tela, independente do scroll */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona na esquerda */
+    z-index: 999; /* Garante que fique à frente de outros elementos */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    
+    background-color: #143613; /* Cor de fundo do menu */
+    border-right: 2px solid #141414; /* Borda à direita do menu */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar o menu */
+    border-radius: 0 15px 15px 0; /* Bordas arredondadas no lado direito */
+}
+
+/* Estilo da lista de navegação */
+nav.menu ul {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    width: 170px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Alinha os itens em coluna */
+    gap: 20px; /* Espaçamento entre os itens */
+    justify-content: center; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    height: 100%; /* Garante que ocupe toda a altura da seção */
+}
+
+nav.menu ul li {
+    width: 100%; /* Faz o item ocupar toda a largura do menu */
+    text-align: center; /* Centraliza o texto */
+}
+
+nav.menu ul li a {
+    display: inline-block; /* Transforma o <a> em um bloco em linha */
+    color: #fff; /* Define a cor do texto */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 18px; /* Tamanho do texto */
+    padding: 10px 0; /* Adiciona um espaçamento ao redor do texto */
+    transition: transform 0.1s, background-color 0.1s; /* Transição suave para hover */
+    width: 100%; /* Ocupa toda a largura do item de menu */
+}
+
+nav.menu ul li a:hover {
+    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    background-color: #275725; /* Adiciona uma cor de fundo no hover */
+    border-radius: 10px; /* Adiciona bordas arredondadas no hover */
+}
+
+/*ESTILO DO CABEÇALHO*/
+header {
+    padding: 30px 4%;
+    width: 80vw; /* O header vai ocupar 80% da largura da tela */
+    margin-left: 20vw; /* O header fica à direita do menu lateral que ocupa 20% */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+header>.interface {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.logo {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+div.logo a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+div.logo a:hover {
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+img.img-logo {
+    max-width: 150px;
+}
+
+h1.img-logo {
+    font-size: 28px;
+}
+
+/*ESTILO DOS DASHBOARDS*/
+section.dashboards {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Deixa espaço para o menu lateral */
+    box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+section.dashboards .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+section.dashboards .flex {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Alinha os cartões à esquerda */
+    flex-wrap: nowrap; /* Impede que os cartões quebrem de linha */
+}
+
+.dashboards .cartoes {
+    color: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    margin-top: 45px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 350px; /* Largura dos cartões */
+}
+
+.dashboards .cartoes h2 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.conteudo-dashboard {
+    padding: 20px;
+    justify-content: center;
+}
+
+/*ESTILO DOS RELATÓRIOS*/
+section.relatorios {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+section.relatorios .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+section.relatorios .flex {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    justify-content: flex-start;
+}
+
+.texto-relatorios {
+    color: #fff;
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
+section.relatorios a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+section.relatorios a li:hover {
+    transform: scale(1.05);
+}
+
+.btn-relatorio button {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 20px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+.btn-relatorio button:hover {
+    transform: scale(1.05);
+}
+
+
+/*TELA DE CADASTRO*/
+section.cadastro {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura total */
+}
+
+section.cadastro .interface {
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+section.cadastro .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+
+.texto-cadastro {
+    color: #fff;
+    font-size: 20px;
+    padding: 40px;
+    padding-bottom: 10px;
+}
+
+section.cadastro a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+section.cadastro a li:hover {
+    transform: scale(1.05);
+}
+
+/*CADASTRO DE AÇÕES*/
+section.cad-acao {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+section.cad-acao .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-acao form div {
+    margin-top: 10px;
+}
+
+.tipo-acao select {
+    height: 30px;
+    width: 400px;
+}
+
+section.cad-acao form input {
+    height: 30px;
+    width: 400px;
+}
+
+.descricao-acao textarea {
+    height: 100px;
+    width: 300px;
+}
+
+section.cad-acao form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 20px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+.btn-acao button:hover {
+    transform: scale(1.05);
+}
+
+/*CADASTRO DE EQUIPAMENTO*/
+section.cad-equipamento {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+section.cad-equipamento .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-equipamento form div {
+    margin-top: 10px;
+}
+
+.nome-equipamento input {
+    height: 30px;
+    width: 400px;
+}
+
+.tipo-equipamento select {
+    height: 30px;
+    width: 400px;
+}
+
+section.cad-equipamento form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 18px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+.btn-equipamento button:hover {
+    transform: scale(1.05);
+}
+
+/*CADASTRO DE OPERADOR*/
+section.cad-operador {
+    width: 80vw; /* Ocupa 80% da largura da tela */
+    margin-left: 20vw; /* Desloca a seção para o lado, respeitando os 20% do menu lateral */
+    box-sizing: border-box; /* Inclui padding e bordas na largura total */
+}
+
+section.cad-operador .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+section.cad-operador form div {
+    margin-top: 10px;
+}
+
+.equipamento-hab select {
+    height: 30px;
+    width: 400px;
+}
+
+section.cad-operador form input {
+    height: 30px;
+    width: 400px;
+}
+
+section.cad-operador form button {
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CDA434;
+    font-size: 20px;
+    margin: 20px 5px;
+    transition: 0.2s;
+}
+
+.btn-operador button:hover {
+    transform: scale(1.05);
+}
