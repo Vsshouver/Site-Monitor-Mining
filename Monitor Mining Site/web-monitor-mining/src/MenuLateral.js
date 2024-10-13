@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MenuLateral({ menuAberto, toggleMenu }) {
+function MenuLateral({ menuAberto, toggleMenu, onDashboardClick, onRelatoriosClick, onCadastroClick }) {
   return (
     <>
       {}
@@ -12,9 +12,9 @@ function MenuLateral({ menuAberto, toggleMenu }) {
           <div className="flex">
             <nav className="menu">
               <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Relatórios</a></li>
-                <li><a href="#">Cadastro</a></li>
+                <li><a href="#" onClick={onDashboardClick}>Dashboard</a></li>
+                <li><a href="#" onClick={onRelatoriosClick}>Relatórios</a></li>
+                <li><a href="#" onClick={onCadastroClick}>Cadastro</a></li>
                 <li><a href="#">Configurações</a></li>
                 <li><a href="#">Sair</a></li>
               </ul>
