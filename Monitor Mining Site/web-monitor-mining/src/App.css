@@ -1,9 +1,53 @@
-/* Estilos gerais */
-body {
-  font-family: 'Poppins', sans-serif;
+/* ESTILO GERAL */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #1b3b1a;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 40px 4%;
+  padding-top: 0%;
+  position: relative;
+}
+
+/* Animação suave ao carregar a página */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+h1.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
 }
 
 /* Estilo do menu lateral */
