@@ -498,3 +498,75 @@ section.cad-operador form button {
   transform: scale(1.05);
   background-color: #ffba08;
 }
+
+/* RESPONSIVIDADE */
+
+/* Responsividade para tablets (768px e abaixo) */
+@media (max-width: 768px) {
+  .menu-lateral {
+    width: 60vw; /* Aumenta a largura do menu lateral */
+  }
+
+  .menu-lateral.fechado {
+    transform: translateX(-60%); /* Mantém parte do menu visível */
+  }
+
+  section.dashboards, section.relatorios, section.cadastro, section.cad-acao, section.cad-equipamento, section.cad-operador {
+    margin-left: 60vw; /* Altera o deslocamento da seção */
+    width: 100vw; /* Ajusta a largura para ocupar toda a tela */
+  }
+
+  .login-container {
+    width: 90%; /* Aumenta a largura do container de login */
+  }
+
+  button.botao-login {
+    width: 80%; /* Aumenta a largura do botão de login */
+  }
+
+  .flex {
+    flex-direction: column; /* Coloca itens em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  nav.menu ul {
+    gap: 10px; /* Reduz o espaço entre os itens do menu */
+  }
+
+  nav.menu ul li a {
+    font-size: 16px; /* Reduz o tamanho da fonte */
+  }
+
+  .tipo-acao select, .nome-equipamento input, .tipo-equipamento select {
+    width: 100%; /* Faz os campos de entrada ocupar 100% da largura */
+  }
+
+  .descricao-acao textarea {
+    width: 100%; /* Faz a área de texto ocupar 100% da largura */
+  }
+
+  /* Ajustes adicionais para o botão de recolher/expandir */
+  .toggle-btn {
+    left: calc(60vw + 10px); /* Ajusta a posição do botão */
+  }
+}
+
+/* Responsividade para celulares (480px e abaixo) */
+@media (max-width: 480px) {
+  h1.titulo {
+    font-size: 30px; /* Reduz o tamanho do título */
+  }
+
+  form.loginForm input, .tipo-acao select, .nome-equipamento input, .tipo-equipamento select {
+    width: 90%; /* Ajusta a largura dos campos para 90% */
+  }
+
+  section.dashboards, section.relatorios, section.cadastro, section.cad-acao, section.cad-equipamento, section.cad-operador {
+    margin-left: 0; /* Remove o deslocamento da seção */
+    width: 100vw; /* Garante que a largura ocupe toda a tela */
+  }
+
+  button.botao-login, section.cad-acao form button, section.cad-equipamento form button, section.cad-operador form button {
+    width: 90%; /* Aumenta a largura dos botões para 90% */
+  }
+}
