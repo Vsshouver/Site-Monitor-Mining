@@ -218,6 +218,48 @@ nav.menu ul li a:hover {
   background-color: #143613;
 }
 
+/*ESTILO DO CABEÇALHO*/
+header {
+  padding: 30px 4%;
+  width: 80vw; /* O header vai ocupar 80% da largura da tela */
+  margin-left: 20vw; /* O header fica à direita do menu lateral que ocupa 20% */
+  box-sizing: border-box; /* Inclui o padding na largura total */
+}
+
+header>.interface {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.logo {
+  display: grid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+div.logo a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+}
+
+div.logo a:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+img.img-logo {
+  max-width: 150px;
+}
+
+h1.img-logo {
+  font-size: 28px;
+}
+
 /*ESTILO DOs DASHBOARDs*/
 section.dashboards {
   width: 80vw; /* Ocupa 80% da largura da tela */
@@ -499,20 +541,19 @@ section.cad-operador form button {
   background-color: #ffba08;
 }
 
-/* RESPONSIVIDADE */
-
-/* Responsividade para tablets (768px e abaixo) */
-@media (max-width: 768px) {
-  .menu-lateral {
-    width: 60vw; /* Aumenta a largura do menu lateral */
+/* RESPONSIVIDADE (1020px e abaixo) */
+@media (max-width: 1020px) {
+  section.menu-lateral {
+    display: none; /* Esconde o menu lateral */
   }
 
-  .menu-lateral.fechado {
-    transform: translateX(-60%); /* Mantém parte do menu visível */
+  header {
+    width: 100vw; /* O header vai ocupar 80% da largura da tela */
+    margin-left: 0vw;
   }
 
   section.dashboards, section.relatorios, section.cadastro, section.cad-acao, section.cad-equipamento, section.cad-operador {
-    margin-left: 60vw; /* Altera o deslocamento da seção */
+    margin-left: 0; /* Remove o deslocamento da seção */
     width: 100vw; /* Ajusta a largura para ocupar toda a tela */
   }
 
@@ -548,25 +589,5 @@ section.cad-operador form button {
   /* Ajustes adicionais para o botão de recolher/expandir */
   .toggle-btn {
     left: calc(60vw + 10px); /* Ajusta a posição do botão */
-  }
-}
-
-/* Responsividade para celulares (480px e abaixo) */
-@media (max-width: 480px) {
-  h1.titulo {
-    font-size: 30px; /* Reduz o tamanho do título */
-  }
-
-  form.loginForm input, .tipo-acao select, .nome-equipamento input, .tipo-equipamento select {
-    width: 90%; /* Ajusta a largura dos campos para 90% */
-  }
-
-  section.dashboards, section.relatorios, section.cadastro, section.cad-acao, section.cad-equipamento, section.cad-operador {
-    margin-left: 0; /* Remove o deslocamento da seção */
-    width: 100vw; /* Garante que a largura ocupe toda a tela */
-  }
-
-  button.botao-login, section.cad-acao form button, section.cad-equipamento form button, section.cad-operador form button {
-    width: 90%; /* Aumenta a largura dos botões para 90% */
   }
 }
