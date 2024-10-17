@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Login.css';
+import './App.css';
 
 function Login({ onLogin }) {
   const [username, setUsername] = useState('');
@@ -17,7 +17,7 @@ function Login({ onLogin }) {
           <img src="Img/mineracao.png" alt="Monitor Mining Logo" />
           <h1>Monitor Mining</h1>
         </div>
-        <form id="loginForm" onSubmit={handleSubmit}>
+        <form class="loginForm" id="loginForm" onSubmit={handleSubmit}>
           <input
             type="text"
             id="username"
@@ -34,7 +34,7 @@ function Login({ onLogin }) {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit" id="botao-login">
+          <button type="submit" class="botao-login" id="botao-login">
             Entrar
           </button>
         </form>

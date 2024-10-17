@@ -11,13 +11,13 @@ function Cadastro({ onCadAcaoClick, onCadEquipamentoClick, onCadOperadorClick })
           </div>
           <div className="opcoes-cadastro">
             <a href="#" onClick={onCadAcaoClick}>
-              <li>Cadastrar Nova Ação</li>
+              <ul>Cadastrar Nova Ação</ul>
             </a>
             <a href="#" onClick={onCadEquipamentoClick}>
-              <li>Cadastrar Equipamento</li>
+              <ul>Cadastrar Equipamento</ul>
             </a>
             <a href="#" onClick={onCadOperadorClick}>
-              <li>Cadastrar Operador</li>
+              <ul>Cadastrar Operador</ul>
             </a>
           </div>
         </div>
