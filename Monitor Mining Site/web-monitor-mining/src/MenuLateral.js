@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MenuLateral({ menuAberto, toggleMenu, onDashboardClick, onRelatoriosClick, onCadastroClick }) {
+function MenuLateral({ menuAberto, toggleMenu, onDashboardClick, onRelatoriosClick, onCadastroClick, onLogout }) {
   return (
     <>
       {}
@@ -16,7 +16,7 @@ function MenuLateral({ menuAberto, toggleMenu, onDashboardClick, onRelatoriosCli
                 <li><a href="#" onClick={onRelatoriosClick}>Relatórios</a></li>
                 <li><a href="#" onClick={onCadastroClick}>Cadastro</a></li>
                 <li><a href="#">Configurações</a></li>
-                <li><a href="#">Sair</a></li>
+                <li><a href="#" onClick={onLogout}>Sair</a></li>
               </ul>
             </nav>
           </div>

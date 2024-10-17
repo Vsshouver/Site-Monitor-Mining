@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Login from './Login';
 import MenuLateral from './MenuLateral';
 import Dashboards from './Dashboards';
 import Relatorios from './Relatorios';
 import Cadastro from './Cadastro';
-import CadAcao from './CadAcao'; // Componente para cadastro de nova ação
-import CadEquipamento from './CadEquipamento'; // Componente para cadastro de equipamento
-import CadOperador from './CadOperador'; // Componente para cadastro de operador
+import CadAcao from './CadAcao';
+import CadEquipamento from './CadEquipamento';
+import CadOperador from './CadOperador';
 import './App.css';
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Estado para verificar se o usuário está logado
   const [menuAberto, setMenuAberto] = useState(true);
   const [dashboardVisible, setDashboardVisible] = useState(true);
   const [relatoriosVisible, setRelatoriosVisible] = useState(false);
@@ -17,9 +19,24 @@ function App() {
   const [cadEquipamentoVisible, setCadEquipamentoVisible] = useState(false);
   const [cadOperadorVisible, setCadOperadorVisible] = useState(false);
 
-  useEffect(() => {
-    setDashboardVisible(true);
-  }, []);
+  // Função de autenticação (simulação de login)
+  const handleLogin = (username, password) => {
+    if (username === 'admin' && password === '12345') { // Exemplo de credenciais
+      setIsAuthenticated(true);
+    } else {
+      alert('Credenciais inválidas. Tente novamente.');
+    }
+  };
+  
+  // Condição para exibir a tela de login antes de carregar o site
+  if (!isAuthenticated) {
+    return <Login onLogin={handleLogin} />;
+  }
+
+   // Função de logout
+  const handleLogout = () => {
+    setIsAuthenticated(false); // Redefine a autenticação
+  };
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -97,6 +114,7 @@ function App() {
         onDashboardClick={handleDashboardClick}
         onRelatoriosClick={handleRelatoriosClick}
         onCadastroClick={handleCadastroClick}
+        onLogout={handleLogout}
       />
       {dashboardVisible && <Dashboards />}
       {relatoriosVisible && <Relatorios />}
